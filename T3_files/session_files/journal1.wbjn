@@ -1,0 +1,3724 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+system1.DisplayText = "Study 1 - Static Stress - Load Case1"
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="C:/Users/Hp/AppData/Local/Temp/PhysicsTransfer/ansys.pmdb")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+matl1 = engineeringData1.CreateMaterial(Name="Steel")
+matlProp1 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["7850 [kg m^-3]"]])
+matlProp2 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["210000000000 [Pa]"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.3"]])
+matlProp3 = matl1.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["56 [W m^-1 K^-1]"]])
+matlProp4 = matl1.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["480 [J kg^-1 K^-1]"]])
+matlProp5 = matl1.CreateProperty(
+    Name="Tensile Ultimate Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp5.SetData(
+    Index=-1,
+    Variables=["Tensile Ultimate Strength"],
+    Values=[["345000000 [Pa]"]])
+matlProp6 = matl1.CreateProperty(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp6.SetData(
+    Index=-1,
+    Variables=["Tensile Yield Strength"],
+    Values=[["207000000 [Pa]"]])
+matlProp7 = matl1.CreateProperty(
+    Name="Coefficient of Thermal Expansion",
+    Definition="Secant",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "Secant", "Behavior": "Isotropic"})
+matlProp7.SetData(
+    SheetName="Coefficient of Thermal Expansion",
+    SheetQualifiers={"Definition": "Secant", "Behavior": "Isotropic"},
+    Index=-1,
+    Variables=["Coefficient of Thermal Expansion"],
+    Values=[["1.2E-05 [K^-1]"]])
+matl2 = engineeringData1.CreateMaterial(Name="Steel 4.6, Plain")
+matlProp8 = matl2.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp8.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["7750 [kg m^-3]"]])
+matlProp9 = matl2.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp9.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["210000000000 [Pa]"]])
+matlProp9.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.3"]])
+matlProp10 = matl2.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp10.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["56 [W m^-1 K^-1]"]])
+matlProp11 = matl2.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp11.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["480 [J kg^-1 K^-1]"]])
+matlProp12 = matl2.CreateProperty(
+    Name="Tensile Ultimate Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp12.SetData(
+    Index=-1,
+    Variables=["Tensile Ultimate Strength"],
+    Values=[["400000000 [Pa]"]])
+matlProp13 = matl2.CreateProperty(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp13.SetData(
+    Index=-1,
+    Variables=["Tensile Yield Strength"],
+    Values=[["240000000 [Pa]"]])
+matlProp14 = matl2.CreateProperty(
+    Name="Coefficient of Thermal Expansion",
+    Definition="Secant",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "Secant", "Behavior": "Isotropic"})
+matlProp14.SetData(
+    SheetName="Coefficient of Thermal Expansion",
+    SheetQualifiers={"Definition": "Secant", "Behavior": "Isotropic"},
+    Index=-1,
+    Variables=["Coefficient of Thermal Expansion"],
+    Values=[["1.2E-05 [K^-1]"]])
+matl3 = engineeringData1.CreateMaterial(Name="Acrylic, Clear")
+matlProp15 = matl3.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp15.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1190 [kg m^-3]"]])
+matlProp16 = matl3.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp16.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["2960000000 [Pa]"]])
+matlProp16.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.395"]])
+matlProp17 = matl3.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp17.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.19 [W m^-1 K^-1]"]])
+matlProp18 = matl3.CreateProperty(
+    Name="Specific Heat",
+    Definition="Constant Pressure",
+    Qualifiers={"Definition": "Constant Pressure", "Behavior": ""})
+matlProp18.SetData(
+    Index=-1,
+    Variables=["Specific Heat"],
+    Values=[["1470 [J kg^-1 K^-1]"]])
+matlProp19 = matl3.CreateProperty(
+    Name="Tensile Ultimate Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp19.SetData(
+    Index=-1,
+    Variables=["Tensile Ultimate Strength"],
+    Values=[["69000000 [Pa]"]])
+matlProp20 = matl3.CreateProperty(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp20.SetData(
+    Index=-1,
+    Variables=["Tensile Yield Strength"],
+    Values=[["40000000 [Pa]"]])
+matlProp21 = matl3.CreateProperty(
+    Name="Coefficient of Thermal Expansion",
+    Definition="Secant",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "Secant", "Behavior": "Isotropic"})
+matlProp21.SetData(
+    SheetName="Coefficient of Thermal Expansion",
+    SheetQualifiers={"Definition": "Secant", "Behavior": "Isotropic"},
+    Index=-1,
+    Variables=["Coefficient of Thermal Expansion"],
+    Values=[["7.4E-05 [K^-1]"]])
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.SendCommand(
+    Command="""
+# -*- coding: utf-8 -*-
+from System.Collections.Generic import IEnumerable, List
+import System
+import ui_handlers
+from functools import cmp_to_key
+
+def SuppressOtherGeoBodies(geoBodyIds):
+	geometry = Model.Geometry
+	geoData = ExtAPI.DataModel.GeoData
+	studyBodyIds = list()
+	for geoBodyId in geoBodyIds:
+		body = geometry.GetBody(geoData.GeoEntityById(geoBodyId))
+		if body == None: continue
+		studyBodyIds.Add(body.ObjectId)
+	bodies = [obj for obj in geometry.GetChildren(DataModelObjectCategory.Body, True) if obj.ObjectState != ObjectState.Suppressed]
+	for body in bodies:
+		if body.ObjectId in studyBodyIds: continue
+		body.Suppressed = True
+
+def MakeGeoBodiesRigid(geoBodyIds):
+	geometry = Model.Geometry
+	geoData = ExtAPI.DataModel.GeoData
+	for geoBodyId in geoBodyIds:
+		body = geometry.GetBody(geoData.GeoEntityById(geoBodyId))
+		if body == None: continue
+		body.StiffnessBehavior = StiffnessBehavior.Rigid
+
+def AssignMaterialByIds(bodyIds, matname):
+	if bodyIds.Count < 1: return
+	for body in Model.GetChildren(DataModelObjectCategory.Body, True):
+		geoBody = body.GetGeoBody()
+		if geoBody.Id in bodyIds: body.Material = matname
+
+def AssignMaterialByNS(nsname, matname):
+	bodyIds = []
+	for ns in Model.GetChildren(DataModelObjectCategory.NamedSelection, True):
+		if ns.Name == nsname:
+			bodyIds.extend(ns.Location.Ids)
+	if bodyIds.Count < 1: return
+	for body in Model.GetChildren(DataModelObjectCategory.Body, True):
+		geoBody = body.GetGeoBody()
+		if geoBody.Id in bodyIds: body.Material = matname
+
+def GetNamedSelectionByName(name):
+	for ns in Model.GetChildren(DataModelObjectCategory.NamedSelection, True):
+		if ns.Name == name: return ns
+	return None
+
+def DeleteConnectionGroups():
+	if Model.Connections:
+		connectionGroupIds = [group.ObjectId for group in Model.Connections.GetChildren(DataModelObjectCategory.ConnectionGroup, False)]
+		for connectionGroupId in connectionGroupIds:
+			obj = DataModel.GetObjectById(connectionGroupId)
+			if obj: obj.Delete()
+	else:
+		Model.AddConnections()
+
+def SetContactGroup():
+	if Model.Connections == None: Model.AddConnections()
+	contactGroups = [group for group in Model.GetChildren(DataModelObjectCategory.ConnectionGroup, True) if group.ConnectionType == AutoDetectionType.Contact]
+	if contactGroups.Count < 1:
+		contactGroup = Model.Connections.AddConnectionGroup()
+		contactGroup.ConnectionType = AutoDetectionType.Contact
+		return contactGroup
+
+def GetContactGroup():
+	contactGroups = [group for group in Model.GetChildren(DataModelObjectCategory.ConnectionGroup, True) if group.ConnectionType == AutoDetectionType.Contact]
+	if contactGroups.Count > 0: return contactGroups[0]
+	else:
+		contactGroup = SetContactGroup()
+		return contactGroup
+	return None
+
+def SetJointGroup():
+	if Model.Connections == None: Model.AddConnections()
+	jointGroups = [group for group in Model.GetChildren(DataModelObjectCategory.ConnectionGroup, True) if group.ConnectionType == AutoDetectionType.Joint]
+	if jointGroups.Count < 1:
+		jointGroup = Model.Connections.AddConnectionGroup()
+		jointGroup.ConnectionType = AutoDetectionType.Joint
+		jointGroup.AutomaticFixedJoints = False
+		jointGroup.RevoluteJoints = False
+		return jointGroup
+
+def GetJointGroup():
+	jointGroups = [group for group in Model.GetChildren(DataModelObjectCategory.ConnectionGroup, True) if group.ConnectionType == AutoDetectionType.Joint]
+	if jointGroups.Count > 0: return jointGroups[0]
+	else:
+		jointGroup = SetJointGroup()
+		return jointGroup
+	return None
+
+def SetField(analysis, prop, val, unit):
+	if analysis.AnalysisType in [AnalysisType.Static, AnalysisType.Transient]:
+		inputs = []
+		outputs = []
+		for i in range(1, analysis.AnalysisSettings.NumberOfSteps+1):
+			endTime = analysis.AnalysisSettings.GetStepEndTime(i)
+			inputs.Add(Quantity(\"{0} [s]\".format(endTime.Value.ToString(System.Globalization.CultureInfo.InvariantCulture))))
+			if i == analysis.AnalysisSettings.NumberOfSteps:
+				outputs.Add(Quantity(\"{0} [{1}]\".format(val.ToString(System.Globalization.CultureInfo.InvariantCulture), unit)))
+			else:
+				outputs.Add(Quantity(\"0.0 [{0}]\".format(unit)))
+		prop.Inputs[0].DiscreteValues = inputs
+		prop.Output.DiscreteValues = outputs
+
+	elif analysis.AnalysisType in [AnalysisType.Harmonic, AnalysisType.Spectrum, AnalysisType.ResponseSpectrum]:
+		prop.Inputs[0].DiscreteValues = [Quantity(\"{0} [Hz]\".format(1.0))]
+		prop.Output.DiscreteValues = [Quantity(\"{0} [{1}]\".format(val.ToString(System.Globalization.CultureInfo.InvariantCulture), unit))]
+
+def GetSelectionArea(object):
+	import units
+	cadUnit = ExtAPI.DataModel.GeoData.Assemblies[0].Unit
+	area = 0
+	for id in bc.Location.Ids: area += ExtAPI.DataModel.GeoData.GeoEntityById(id).Area
+	area = units.ConvertUnit(area, cadUnit, \"m\")
+	return area
+
+def FlipInvalidContacts():
+	contacts = [contact for contact in Model.GetChildren(DataModelObjectCategory.ContactRegion, True) if not contact.Suppressed]
+	for contact in contacts:
+		if contact.InternalObject.State == 2:
+			contact.FlipContactTarget()
+
+def SetPickFilter(selection):
+	ds = DataModel.InternalObject[\"ds\"]
+	sm = ds.SelectionManager()
+	geoType = DataModel.GeoData.GeoEntityById(selection.Ids[0]).Type
+	if geoType == GeoCellTypeEnum.GeoBody:
+		sm.PickFilterAuto = 1
+	elif geoType == GeoCellTypeEnum.GeoFace:
+		sm.PickFilterAuto = 2
+	elif geoType == GeoCellTypeEnum.GeoEdge:
+		sm.PickFilterAuto = 4
+	elif geoType == GeoCellTypeEnum.GeoVertex:
+		sm.PickFilterAuto = 8
+
+def DeleteDefaultConnections():
+	if Model.Connections:
+		contacts = [contact for contact in Model.GetChildren(DataModelObjectCategory.ContactRegion, True)]
+		with Transaction():
+			for obj in contacts:
+				if obj.ScopeMode == AutomaticOrManual.Automatic: obj.Delete()
+	else:
+		Model.AddConnections()
+
+def datamodel_cmp(a,b):
+	if a.DataModelObjectCategory == DataModelObjectCategory.CoordinateSystem:
+		if b.DataModelObjectCategory != DataModelObjectCategory.CoordinateSystem:
+			return 1
+	else:
+		return -1
+
+datamodel_key = cmp_to_key(datamodel_cmp)
+
+def GetDiscoveryObjects():
+	objects = [child for child in Model.GetChildren(DataModelObjectCategory.DataModelObject,True) if hasattr(child, 'ImportableObjectSourceId') and child.ImportableObjectSourceId == \"Discovery\" and child.DataModelObjectCategory != DataModelObjectCategory.Analysis and child.DataModelObjectCategory != DataModelObjectCategory.Mesh]
+	objects.sort(key=datamodel_key)
+	return objects
+
+kept_analyses = []
+last_analysis = None
+
+DeleteConnectionGroups()
+SetContactGroup()
+ExtAPI.Application.ActiveUnitSystem = MechanicalUnitSystem.StandardMKS
+ExtAPI.Application.ActiveAngularVelocityUnit = AngularVelocityUnitType.RadianPerSecond
+
+is_beta_on = ExtAPI.Application.ScriptByName(\"jscript\").CallJScript(\"DSIsBetaOptionsEnabled\")
+
+with Transaction():
+	ExtAPI.Log.WriteMessage(\"Start Model Transfer\")
+	try:
+		AssignMaterialByIds([131,185,393,596,620,646,835,2147,2150,2163,2223,2290], 'Steel')
+	except:
+		message = Ansys.Mechanical.Application.Message('Steel' + \" material couldn't be assigned.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		AssignMaterialByIds([888,1002,1062,1122,1182,1188,1303,1363,1425,1488,1551,1614,1677,1740,1803,1866,1929,1992,2055,2118], 'Steel 4.6, Plain')
+	except:
+		message = Ansys.Mechanical.Application.Message('Steel 4.6, Plain' + \" material couldn't be assigned.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		AssignMaterialByIds([2133], 'Acrylic, Clear')
+	except:
+		message = Ansys.Mechanical.Application.Message('Acrylic, Clear' + \" material couldn't be assigned.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	mapOfImportedObjects = GetDiscoveryObjects()
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"37d789ab-8228-4db5-a07a-dc9083b0f582\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"37d789ab-8228-4db5-a07a-dc9083b0f582\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"37d789ab-8228-4db5-a07a-dc9083b0f582\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded1 [Component19:1||Component21:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [2146]
+			bc.SourceLocation = selection
+			selection.Ids = [2149]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded1 [Component19:1||Component21:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"37276c7a-a778-47af-b972-bee96da8bd20\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"37276c7a-a778-47af-b972-bee96da8bd20\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"37276c7a-a778-47af-b972-bee96da8bd20\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded2 [Component18:1||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [2135]
+			bc.SourceLocation = selection
+			selection.Ids = [2298]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded2 [Component18:1||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"bdf8e7df-c1e2-4b2c-b215-488925f1a1b3\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"bdf8e7df-c1e2-4b2c-b215-488925f1a1b3\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"bdf8e7df-c1e2-4b2c-b215-488925f1a1b3\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded3 [Component18:1||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [2135]
+			bc.SourceLocation = selection
+			selection.Ids = [2231]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded3 [Component18:1||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"30bfd978-fda2-4c7a-a0a0-35ff32b187a4\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"30bfd978-fda2-4c7a-a0a0-35ff32b187a4\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"30bfd978-fda2-4c7a-a0a0-35ff32b187a4\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded4 [Component18:1||Component21:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [2134]
+			bc.SourceLocation = selection
+			selection.Ids = [2162]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded4 [Component18:1||Component21:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"bd8de774-ecb0-4f43-9f3f-1a173f1517a6\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"bd8de774-ecb0-4f43-9f3f-1a173f1517a6\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"bd8de774-ecb0-4f43-9f3f-1a173f1517a6\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded5 [Component18:1||Component21:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [2134]
+			bc.SourceLocation = selection
+			selection.Ids = [2149]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded5 [Component18:1||Component21:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"caa38c2f-8da7-4189-b632-5b543e278b1a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"caa38c2f-8da7-4189-b632-5b543e278b1a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"caa38c2f-8da7-4189-b632-5b543e278b1a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded6 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1366]
+			bc.SourceLocation = selection
+			selection.Ids = [2229]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded6 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6c3b26d0-3eaf-49fc-be0e-01043e9ce707\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6c3b26d0-3eaf-49fc-be0e-01043e9ce707\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6c3b26d0-3eaf-49fc-be0e-01043e9ce707\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded7 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1306]
+			bc.SourceLocation = selection
+			selection.Ids = [2227]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded7 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"a0ce0404-f5e5-4e40-9b20-8d0a000af46a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"a0ce0404-f5e5-4e40-9b20-8d0a000af46a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"a0ce0404-f5e5-4e40-9b20-8d0a000af46a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded8 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1191]
+			bc.SourceLocation = selection
+			selection.Ids = [2296]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded8 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6021e243-467a-45d5-9939-d7d0ffb0eeda\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6021e243-467a-45d5-9939-d7d0ffb0eeda\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6021e243-467a-45d5-9939-d7d0ffb0eeda\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded9 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1185]
+			bc.SourceLocation = selection
+			selection.Ids = [2294]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded9 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"3b0aa21a-445c-421e-83c9-cb119f8ca132\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"3b0aa21a-445c-421e-83c9-cb119f8ca132\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"3b0aa21a-445c-421e-83c9-cb119f8ca132\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded10 [Side Frame: Right:1||Component21:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [601]
+			bc.SourceLocation = selection
+			selection.Ids = [2164]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded10 [Side Frame: Right:1||Component21:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6c552918-0fe5-46f9-ba2f-cde18e5679be\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6c552918-0fe5-46f9-ba2f-cde18e5679be\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6c552918-0fe5-46f9-ba2f-cde18e5679be\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded13 [Side Frame: Right:1||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [601]
+			bc.SourceLocation = selection
+			selection.Ids = [878]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded13 [Side Frame: Right:1||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"a2e5cc10-7ec7-49a2-9e0c-90bcd221e707\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"a2e5cc10-7ec7-49a2-9e0c-90bcd221e707\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"a2e5cc10-7ec7-49a2-9e0c-90bcd221e707\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded14 [Side Frame: Right:1||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [601]
+			bc.SourceLocation = selection
+			selection.Ids = [876]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded14 [Side Frame: Right:1||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"42e0a601-8eea-496a-bdca-151f200f89e6\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"42e0a601-8eea-496a-bdca-151f200f89e6\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"42e0a601-8eea-496a-bdca-151f200f89e6\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded15 [Side Frame: Right:1||Back top Support:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [601]
+			bc.SourceLocation = selection
+			selection.Ids = [652]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded15 [Side Frame: Right:1||Back top Support:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d37d9733-b09f-4842-b91e-3861295289b5\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d37d9733-b09f-4842-b91e-3861295289b5\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d37d9733-b09f-4842-b91e-3861295289b5\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded16 [Side Frame: Right:1||Front top Support:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [601]
+			bc.SourceLocation = selection
+			selection.Ids = [626]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded16 [Side Frame: Right:1||Front top Support:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"a524e1a4-819f-486c-b429-77a90284549e\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"a524e1a4-819f-486c-b429-77a90284549e\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"a524e1a4-819f-486c-b429-77a90284549e\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded17 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [2121]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded17 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"29e24b0d-54e5-40c6-a575-862607cef705\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"29e24b0d-54e5-40c6-a575-862607cef705\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"29e24b0d-54e5-40c6-a575-862607cef705\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded18 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [2058]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded18 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"93ca36bd-96c2-469e-96fa-eb9c26738d9c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"93ca36bd-96c2-469e-96fa-eb9c26738d9c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"93ca36bd-96c2-469e-96fa-eb9c26738d9c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded19 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1995]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded19 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"e8595eaa-b03a-476f-9475-3a6971503066\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"e8595eaa-b03a-476f-9475-3a6971503066\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"e8595eaa-b03a-476f-9475-3a6971503066\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded20 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1932]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded20 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d91c05e8-51b6-4979-aba1-2c45fb9fce58\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d91c05e8-51b6-4979-aba1-2c45fb9fce58\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d91c05e8-51b6-4979-aba1-2c45fb9fce58\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded21 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1869]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded21 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"5bbbf432-8f18-4fe5-b86b-8e65fa0552c4\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"5bbbf432-8f18-4fe5-b86b-8e65fa0552c4\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"5bbbf432-8f18-4fe5-b86b-8e65fa0552c4\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded22 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1806]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded22 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"1c952ddf-c8c5-4c19-805e-d5347813d094\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"1c952ddf-c8c5-4c19-805e-d5347813d094\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"1c952ddf-c8c5-4c19-805e-d5347813d094\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded23 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1125]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded23 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ddf0e1b1-2c1c-4be8-9bfc-411123e447ff\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ddf0e1b1-2c1c-4be8-9bfc-411123e447ff\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ddf0e1b1-2c1c-4be8-9bfc-411123e447ff\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded24 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [597]
+			bc.SourceLocation = selection
+			selection.Ids = [1065]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded24 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"93ea970d-3cf2-45ba-99a9-dc3d9c24dc01\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"93ea970d-3cf2-45ba-99a9-dc3d9c24dc01\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"93ea970d-3cf2-45ba-99a9-dc3d9c24dc01\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded25 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1743]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded25 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"a1114c4f-6c58-4b95-a366-ecc0e1fa5cb8\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"a1114c4f-6c58-4b95-a366-ecc0e1fa5cb8\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"a1114c4f-6c58-4b95-a366-ecc0e1fa5cb8\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded26 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1680]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded26 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"5897d3d0-7d8e-471f-a640-79260e15677e\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"5897d3d0-7d8e-471f-a640-79260e15677e\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"5897d3d0-7d8e-471f-a640-79260e15677e\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded27 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1617]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded27 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"faf36e8c-8f56-4507-ba96-f7b1418261cc\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"faf36e8c-8f56-4507-ba96-f7b1418261cc\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"faf36e8c-8f56-4507-ba96-f7b1418261cc\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded28 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1554]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded28 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"45261a56-a6d5-4d6e-9862-73b6a972f93d\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"45261a56-a6d5-4d6e-9862-73b6a972f93d\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"45261a56-a6d5-4d6e-9862-73b6a972f93d\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded29 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1491]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded29 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"7b2eb6ba-a563-4002-ba1e-088f95ad7e65\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"7b2eb6ba-a563-4002-ba1e-088f95ad7e65\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"7b2eb6ba-a563-4002-ba1e-088f95ad7e65\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded30 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1428]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded30 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d1b8bd9d-5f5a-4370-8772-bc4e399a009b\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d1b8bd9d-5f5a-4370-8772-bc4e399a009b\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d1b8bd9d-5f5a-4370-8772-bc4e399a009b\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded31 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [1005]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded31 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"c97a51e3-9050-49c7-a8b1-b744bad740f8\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"c97a51e3-9050-49c7-a8b1-b744bad740f8\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"c97a51e3-9050-49c7-a8b1-b744bad740f8\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded32 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [394]
+			bc.SourceLocation = selection
+			selection.Ids = [891]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded32 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6c83bf05-123a-408f-9b0d-e163dcd22b48\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6c83bf05-123a-408f-9b0d-e163dcd22b48\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6c83bf05-123a-408f-9b0d-e163dcd22b48\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded33 [Side Frame:Left:1||Component21:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [2151]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded33 [Side Frame:Left:1||Component21:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"e1f3249c-98ee-4e05-9812-95ca08737f90\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"e1f3249c-98ee-4e05-9812-95ca08737f90\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"e1f3249c-98ee-4e05-9812-95ca08737f90\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded34 [Side Frame:Left:1||Component19:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [2148]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded34 [Side Frame:Left:1||Component19:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"2e5e0ad4-4674-4de4-9781-a7c72b14d8be\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"2e5e0ad4-4674-4de4-9781-a7c72b14d8be\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"2e5e0ad4-4674-4de4-9781-a7c72b14d8be\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded37 [Side Frame:Left:1||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [880]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded37 [Side Frame:Left:1||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"1c5cdce7-98c8-4921-bef3-2f3bb32892a9\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"1c5cdce7-98c8-4921-bef3-2f3bb32892a9\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"1c5cdce7-98c8-4921-bef3-2f3bb32892a9\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded38 [Side Frame:Left:1||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [879]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded38 [Side Frame:Left:1||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"72c89b0a-6fdd-4e36-928d-8812a95c56d2\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"72c89b0a-6fdd-4e36-928d-8812a95c56d2\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"72c89b0a-6fdd-4e36-928d-8812a95c56d2\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded39 [Side Frame:Left:1||Back top Support:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [653]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded39 [Side Frame:Left:1||Back top Support:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"b522cee8-ca7c-4aa4-8667-767d34f33d88\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"b522cee8-ca7c-4aa4-8667-767d34f33d88\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"b522cee8-ca7c-4aa4-8667-767d34f33d88\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded40 [Side Frame:Left:1||Front top Support:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [398]
+			bc.SourceLocation = selection
+			selection.Ids = [627]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded40 [Side Frame:Left:1||Front top Support:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"9d2b7945-9c3a-4fba-8d77-65c72e207f02\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"9d2b7945-9c3a-4fba-8d77-65c72e207f02\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"9d2b7945-9c3a-4fba-8d77-65c72e207f02\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded42 [Simulation Model 1:1(Body6)||Component18:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [134]
+			bc.SourceLocation = selection
+			selection.Ids = [2135]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded42 [Simulation Model 1:1(Body6)||Component18:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"8aa43c9d-0917-451a-832c-f469f3588e3d\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"8aa43c9d-0917-451a-832c-f469f3588e3d\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"8aa43c9d-0917-451a-832c-f469f3588e3d\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded43 [Simulation Model 1:1(Body6)||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [144]
+			bc.SourceLocation = selection
+			selection.Ids = [2291]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded43 [Simulation Model 1:1(Body6)||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"4b0cc9fb-5910-421e-a42a-5b412be4b49f\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"4b0cc9fb-5910-421e-a42a-5b412be4b49f\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"4b0cc9fb-5910-421e-a42a-5b412be4b49f\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded44 [Simulation Model 1:1(Body6)||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [143]
+			bc.SourceLocation = selection
+			selection.Ids = [2297]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded44 [Simulation Model 1:1(Body6)||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ba4e280b-3ccd-4b94-8a4d-320144db4df0\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ba4e280b-3ccd-4b94-8a4d-320144db4df0\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ba4e280b-3ccd-4b94-8a4d-320144db4df0\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded48 [Simulation Model 1:1(Body5)||Component18:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [186]
+			bc.SourceLocation = selection
+			selection.Ids = [2135]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded48 [Simulation Model 1:1(Body5)||Component18:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"df8a41e4-1a13-4b8d-b26b-346dd5cd12b3\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"df8a41e4-1a13-4b8d-b26b-346dd5cd12b3\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"df8a41e4-1a13-4b8d-b26b-346dd5cd12b3\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded49 [Simulation Model 1:1(Body5)||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [191]
+			bc.SourceLocation = selection
+			selection.Ids = [2224]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded49 [Simulation Model 1:1(Body5)||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"f1a934a5-ab32-4547-92cb-1c14aab69f2f\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"f1a934a5-ab32-4547-92cb-1c14aab69f2f\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"f1a934a5-ab32-4547-92cb-1c14aab69f2f\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded50 [Simulation Model 1:1(Body5)||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [190]
+			bc.SourceLocation = selection
+			selection.Ids = [2230]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded50 [Simulation Model 1:1(Body5)||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"938bc4df-8c34-4477-bea3-3426accc9a5c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"938bc4df-8c34-4477-bea3-3426accc9a5c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"938bc4df-8c34-4477-bea3-3426accc9a5c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded51 [Simulation Model 1:1(Body5)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [189]
+			bc.SourceLocation = selection
+			selection.Ids = [1364]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded51 [Simulation Model 1:1(Body5)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"b937f543-3863-4d67-9bd0-9dd37c633a0d\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"b937f543-3863-4d67-9bd0-9dd37c633a0d\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"b937f543-3863-4d67-9bd0-9dd37c633a0d\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded52 [Simulation Model 1:1(Body5)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [188]
+			bc.SourceLocation = selection
+			selection.Ids = [1304]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded52 [Simulation Model 1:1(Body5)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"65ef8ad5-7fc6-4ff7-b5d9-ee0245aff917\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"65ef8ad5-7fc6-4ff7-b5d9-ee0245aff917\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"65ef8ad5-7fc6-4ff7-b5d9-ee0245aff917\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded53 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1365]
+			bc.SourceLocation = selection
+			selection.Ids = [2228]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded53 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:12||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"34dd52b0-a264-457a-8e80-68bdf4598978\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"34dd52b0-a264-457a-8e80-68bdf4598978\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"34dd52b0-a264-457a-8e80-68bdf4598978\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded54 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11||Component29:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1305]
+			bc.SourceLocation = selection
+			selection.Ids = [2222]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded54 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:11||Component29:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"aaa67eb6-6917-4007-a396-576b1a7ac0a6\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"aaa67eb6-6917-4007-a396-576b1a7ac0a6\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"aaa67eb6-6917-4007-a396-576b1a7ac0a6\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded55 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1190]
+			bc.SourceLocation = selection
+			selection.Ids = [2295]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded55 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"a11a19f3-301f-4b4c-b17d-8a1c3bdc8928\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"a11a19f3-301f-4b4c-b17d-8a1c3bdc8928\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"a11a19f3-301f-4b4c-b17d-8a1c3bdc8928\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded56 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9||Component29:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [1184]
+			bc.SourceLocation = selection
+			selection.Ids = [2289]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded56 [Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9||Component29:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"957c9f4e-95c8-4522-abc1-f9d16807b3ca\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"957c9f4e-95c8-4522-abc1-f9d16807b3ca\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"957c9f4e-95c8-4522-abc1-f9d16807b3ca\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded57 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [863]
+			bc.SourceLocation = selection
+			selection.Ids = [1426]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded57 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"76983469-d3e7-4d71-a08a-8d3207cc6780\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"76983469-d3e7-4d71-a08a-8d3207cc6780\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"76983469-d3e7-4d71-a08a-8d3207cc6780\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded58 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [862]
+			bc.SourceLocation = selection
+			selection.Ids = [1429]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded58 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"9351afaf-eaa9-494b-9692-4c26854dc440\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"9351afaf-eaa9-494b-9692-4c26854dc440\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"9351afaf-eaa9-494b-9692-4c26854dc440\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded59 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [861]
+			bc.SourceLocation = selection
+			selection.Ids = [1427]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded59 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"f1445620-d8bc-4aa3-9ab0-e5eac345f947\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"f1445620-d8bc-4aa3-9ab0-e5eac345f947\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"f1445620-d8bc-4aa3-9ab0-e5eac345f947\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded60 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [860]
+			bc.SourceLocation = selection
+			selection.Ids = [1867]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded60 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"bea45f8e-7395-4d7c-83f5-6fcf954fd1aa\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"bea45f8e-7395-4d7c-83f5-6fcf954fd1aa\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"bea45f8e-7395-4d7c-83f5-6fcf954fd1aa\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded61 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [859]
+			bc.SourceLocation = selection
+			selection.Ids = [1870]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded61 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"be26abc2-f384-435b-af91-dff1a9f625ed\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"be26abc2-f384-435b-af91-dff1a9f625ed\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"be26abc2-f384-435b-af91-dff1a9f625ed\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded62 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [858]
+			bc.SourceLocation = selection
+			selection.Ids = [1868]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded62 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"58bda9af-0259-4194-8d53-d483c3f2d6f1\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"58bda9af-0259-4194-8d53-d483c3f2d6f1\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"58bda9af-0259-4194-8d53-d483c3f2d6f1\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded63 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [856]
+			bc.SourceLocation = selection
+			selection.Ids = [1489]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded63 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"23c586e5-07ff-46ea-9967-a99da3b3fd20\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"23c586e5-07ff-46ea-9967-a99da3b3fd20\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"23c586e5-07ff-46ea-9967-a99da3b3fd20\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded64 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [855]
+			bc.SourceLocation = selection
+			selection.Ids = [1492]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded64 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6c171a97-9f06-46ba-b328-894a0d5ca925\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6c171a97-9f06-46ba-b328-894a0d5ca925\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6c171a97-9f06-46ba-b328-894a0d5ca925\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded65 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [854]
+			bc.SourceLocation = selection
+			selection.Ids = [1490]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded65 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"2ebd0d50-0ceb-4ae5-b647-4089e7e2f0c9\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"2ebd0d50-0ceb-4ae5-b647-4089e7e2f0c9\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"2ebd0d50-0ceb-4ae5-b647-4089e7e2f0c9\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded66 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [853]
+			bc.SourceLocation = selection
+			selection.Ids = [1804]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded66 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"0b1c57c1-6d4d-4bdc-bf9a-5dd708638e82\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"0b1c57c1-6d4d-4bdc-bf9a-5dd708638e82\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"0b1c57c1-6d4d-4bdc-bf9a-5dd708638e82\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded67 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [852]
+			bc.SourceLocation = selection
+			selection.Ids = [1807]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded67 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d9f03a2d-a6bd-465d-a613-71f078096c98\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d9f03a2d-a6bd-465d-a613-71f078096c98\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d9f03a2d-a6bd-465d-a613-71f078096c98\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded68 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [851]
+			bc.SourceLocation = selection
+			selection.Ids = [1805]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded68 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"e15c2578-ce05-40de-95ab-0eaf913980b2\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"e15c2578-ce05-40de-95ab-0eaf913980b2\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"e15c2578-ce05-40de-95ab-0eaf913980b2\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded69 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [850]
+			bc.SourceLocation = selection
+			selection.Ids = [2056]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded69 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"df6d85bc-d682-4181-a297-e883bf474b7d\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"df6d85bc-d682-4181-a297-e883bf474b7d\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"df6d85bc-d682-4181-a297-e883bf474b7d\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded70 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [849]
+			bc.SourceLocation = selection
+			selection.Ids = [2059]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded70 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"51ca3ba0-73d1-4ff7-9f42-9f8984a601d5\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"51ca3ba0-73d1-4ff7-9f42-9f8984a601d5\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"51ca3ba0-73d1-4ff7-9f42-9f8984a601d5\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded71 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [848]
+			bc.SourceLocation = selection
+			selection.Ids = [2057]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded71 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:11]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"80f33ccd-07a7-4a6c-b843-20a74946aab5\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"80f33ccd-07a7-4a6c-b843-20a74946aab5\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"80f33ccd-07a7-4a6c-b843-20a74946aab5\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded72 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [847]
+			bc.SourceLocation = selection
+			selection.Ids = [1993]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded72 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"c19848e3-7a62-4e24-9ad9-16c9f01b04a2\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"c19848e3-7a62-4e24-9ad9-16c9f01b04a2\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"c19848e3-7a62-4e24-9ad9-16c9f01b04a2\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded73 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [845]
+			bc.SourceLocation = selection
+			selection.Ids = [1996]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded73 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"349f42c3-d597-4d20-b7f5-4c97414d8ac1\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"349f42c3-d597-4d20-b7f5-4c97414d8ac1\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"349f42c3-d597-4d20-b7f5-4c97414d8ac1\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded74 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [844]
+			bc.SourceLocation = selection
+			selection.Ids = [1994]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded74 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"5bdafb3b-e77b-4229-8052-a36c5494cbcc\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"5bdafb3b-e77b-4229-8052-a36c5494cbcc\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"5bdafb3b-e77b-4229-8052-a36c5494cbcc\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded75 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [843]
+			bc.SourceLocation = selection
+			selection.Ids = [1741]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded75 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"311e6b88-fdfe-4b41-be79-7be391726ef0\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"311e6b88-fdfe-4b41-be79-7be391726ef0\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"311e6b88-fdfe-4b41-be79-7be391726ef0\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded76 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [842]
+			bc.SourceLocation = selection
+			selection.Ids = [1744]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded76 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"b7584bef-4eed-4b37-a9ac-734a08d1807a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"b7584bef-4eed-4b37-a9ac-734a08d1807a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"b7584bef-4eed-4b37-a9ac-734a08d1807a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded77 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [841]
+			bc.SourceLocation = selection
+			selection.Ids = [1742]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded77 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:6]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"feb01a6a-e8a4-45ce-8672-2cbcc2757162\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"feb01a6a-e8a4-45ce-8672-2cbcc2757162\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"feb01a6a-e8a4-45ce-8672-2cbcc2757162\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded78 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [840]
+			bc.SourceLocation = selection
+			selection.Ids = [1930]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded78 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"986cec96-00b6-43cc-89ac-bc8641233536\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"986cec96-00b6-43cc-89ac-bc8641233536\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"986cec96-00b6-43cc-89ac-bc8641233536\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded79 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [839]
+			bc.SourceLocation = selection
+			selection.Ids = [1933]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded79 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"69d60b47-441b-4e3c-94a1-26e998798e6c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"69d60b47-441b-4e3c-94a1-26e998798e6c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"69d60b47-441b-4e3c-94a1-26e998798e6c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded80 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [838]
+			bc.SourceLocation = selection
+			selection.Ids = [1931]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded80 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"66728735-b520-4023-8ae6-46d33b4c2a9c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"66728735-b520-4023-8ae6-46d33b4c2a9c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"66728735-b520-4023-8ae6-46d33b4c2a9c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded81 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [837]
+			bc.SourceLocation = selection
+			selection.Ids = [1552]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded81 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d9f0aeef-6123-4f3a-b3a5-5b84a278a8ed\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d9f0aeef-6123-4f3a-b3a5-5b84a278a8ed\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d9f0aeef-6123-4f3a-b3a5-5b84a278a8ed\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded82 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [836]
+			bc.SourceLocation = selection
+			selection.Ids = [1555]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded82 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"416be8fc-12a7-4cba-a9d9-b52bf704e20c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"416be8fc-12a7-4cba-a9d9-b52bf704e20c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"416be8fc-12a7-4cba-a9d9-b52bf704e20c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded83 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [886]
+			bc.SourceLocation = selection
+			selection.Ids = [1553]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded83 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:3]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"f594d516-a312-459e-9cbf-13c3397c6264\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"f594d516-a312-459e-9cbf-13c3397c6264\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"f594d516-a312-459e-9cbf-13c3397c6264\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded84 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [885]
+			bc.SourceLocation = selection
+			selection.Ids = [2119]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded84 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"4df2c47d-bd70-4f20-9433-d6f8221c09da\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"4df2c47d-bd70-4f20-9433-d6f8221c09da\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"4df2c47d-bd70-4f20-9433-d6f8221c09da\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded85 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [884]
+			bc.SourceLocation = selection
+			selection.Ids = [2122]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded85 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"37b61446-696d-4498-ab70-a06a71786154\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"37b61446-696d-4498-ab70-a06a71786154\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"37b61446-696d-4498-ab70-a06a71786154\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded86 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [883]
+			bc.SourceLocation = selection
+			selection.Ids = [2120]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded86 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:12]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d7edf5fd-350a-4b52-b482-285035451490\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d7edf5fd-350a-4b52-b482-285035451490\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d7edf5fd-350a-4b52-b482-285035451490\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded87 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [882]
+			bc.SourceLocation = selection
+			selection.Ids = [1678]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded87 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"d3faa697-624b-40e0-98e3-c049d597467f\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"d3faa697-624b-40e0-98e3-c049d597467f\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"d3faa697-624b-40e0-98e3-c049d597467f\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded88 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [877]
+			bc.SourceLocation = selection
+			selection.Ids = [1681]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded88 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"1f22a613-053f-47c9-b36c-9278e9313665\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"1f22a613-053f-47c9-b36c-9278e9313665\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"1f22a613-053f-47c9-b36c-9278e9313665\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded89 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [868]
+			bc.SourceLocation = selection
+			selection.Ids = [1679]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded89 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:5]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"43d99103-2bb9-47f6-900c-8d3fadc89239\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"43d99103-2bb9-47f6-900c-8d3fadc89239\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"43d99103-2bb9-47f6-900c-8d3fadc89239\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded90 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [857]
+			bc.SourceLocation = selection
+			selection.Ids = [1615]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded90 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"676ec41e-615d-4d04-b39e-dd82d6147ffa\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"676ec41e-615d-4d04-b39e-dd82d6147ffa\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"676ec41e-615d-4d04-b39e-dd82d6147ffa\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded91 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [846]
+			bc.SourceLocation = selection
+			selection.Ids = [1618]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded91 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"088d7735-a6c4-4a72-b19d-b02af006cc29\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"088d7735-a6c4-4a72-b19d-b02af006cc29\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"088d7735-a6c4-4a72-b19d-b02af006cc29\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded92 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [834]
+			bc.SourceLocation = selection
+			selection.Ids = [1616]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded92 [Bottom Frame:1||Hexagon Head Bolt DIN EN 24014 - M14 x 60 Steel 4.6 Plain v1:4]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"c81eb5c0-9567-44b4-b70a-755a0129dba2\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"c81eb5c0-9567-44b4-b70a-755a0129dba2\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"c81eb5c0-9567-44b4-b70a-755a0129dba2\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded93 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [651]
+			bc.SourceLocation = selection
+			selection.Ids = [1063]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded93 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"75783170-0680-4cd3-ad6f-260aeb642d5a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"75783170-0680-4cd3-ad6f-260aeb642d5a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"75783170-0680-4cd3-ad6f-260aeb642d5a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded94 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [650]
+			bc.SourceLocation = selection
+			selection.Ids = [1066]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded94 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"11a20b1d-95af-4763-a283-83ba4932a5d8\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"11a20b1d-95af-4763-a283-83ba4932a5d8\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"11a20b1d-95af-4763-a283-83ba4932a5d8\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded95 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [649]
+			bc.SourceLocation = selection
+			selection.Ids = [1061]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded95 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"4a707f52-d48c-41d6-956b-763264f44d3a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"4a707f52-d48c-41d6-956b-763264f44d3a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"4a707f52-d48c-41d6-956b-763264f44d3a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded96 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [648]
+			bc.SourceLocation = selection
+			selection.Ids = [1003]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded96 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"cf5d7230-e7da-4338-bb99-f2f525ebb04a\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"cf5d7230-e7da-4338-bb99-f2f525ebb04a\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"cf5d7230-e7da-4338-bb99-f2f525ebb04a\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded97 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [647]
+			bc.SourceLocation = selection
+			selection.Ids = [1006]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded97 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"cffd766e-e283-4338-ab78-aab0a9bb8160\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"cffd766e-e283-4338-ab78-aab0a9bb8160\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"cffd766e-e283-4338-ab78-aab0a9bb8160\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded98 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [645]
+			bc.SourceLocation = selection
+			selection.Ids = [1001]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded98 [Back top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6adedd53-13d3-458a-b3d1-b5ada2e78159\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6adedd53-13d3-458a-b3d1-b5ada2e78159\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6adedd53-13d3-458a-b3d1-b5ada2e78159\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded99 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [625]
+			bc.SourceLocation = selection
+			selection.Ids = [1123]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded99 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"701fc614-7c9b-4746-9592-3b1b8fcbc182\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"701fc614-7c9b-4746-9592-3b1b8fcbc182\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"701fc614-7c9b-4746-9592-3b1b8fcbc182\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded100 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [624]
+			bc.SourceLocation = selection
+			selection.Ids = [1126]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded100 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"46781458-24af-4f66-88fb-b3ce83072b4f\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"46781458-24af-4f66-88fb-b3ce83072b4f\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"46781458-24af-4f66-88fb-b3ce83072b4f\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded101 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [623]
+			bc.SourceLocation = selection
+			selection.Ids = [1121]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded101 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"910bb447-a6d0-42da-b555-c51d51b39f33\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"910bb447-a6d0-42da-b555-c51d51b39f33\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"910bb447-a6d0-42da-b555-c51d51b39f33\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded102 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [622]
+			bc.SourceLocation = selection
+			selection.Ids = [889]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded102 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"8fec8f93-513f-4f4f-9bea-27fdaed14f05\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"8fec8f93-513f-4f4f-9bea-27fdaed14f05\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"8fec8f93-513f-4f4f-9bea-27fdaed14f05\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded103 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [621]
+			bc.SourceLocation = selection
+			selection.Ids = [892]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded103 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ee5c8a36-8706-4be4-a4e7-b0378a123dee\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ee5c8a36-8706-4be4-a4e7-b0378a123dee\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ee5c8a36-8706-4be4-a4e7-b0378a123dee\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded104 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [619]
+			bc.SourceLocation = selection
+			selection.Ids = [887]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded104 [Front top Support:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"7c9fd1cc-ffb6-46a8-b2d5-de7ed9fdf0cb\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"7c9fd1cc-ffb6-46a8-b2d5-de7ed9fdf0cb\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"7c9fd1cc-ffb6-46a8-b2d5-de7ed9fdf0cb\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded105 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [598]
+			bc.SourceLocation = selection
+			selection.Ids = [1064]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded105 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:7]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"b742035d-cda7-4c69-a8e0-02be61325ce3\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"b742035d-cda7-4c69-a8e0-02be61325ce3\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"b742035d-cda7-4c69-a8e0-02be61325ce3\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded106 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [595]
+			bc.SourceLocation = selection
+			selection.Ids = [1124]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded106 [Side Frame: Right:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:8]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"90bf9155-83c3-496f-9a3d-ad2215001965\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"90bf9155-83c3-496f-9a3d-ad2215001965\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"90bf9155-83c3-496f-9a3d-ad2215001965\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded107 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [395]
+			bc.SourceLocation = selection
+			selection.Ids = [1004]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded107 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:2]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"44abc664-47f3-45c5-aa83-023ff417df7c\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"44abc664-47f3-45c5-aa83-023ff417df7c\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"44abc664-47f3-45c5-aa83-023ff417df7c\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded108 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [392]
+			bc.SourceLocation = selection
+			selection.Ids = [890]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded108 [Side Frame:Left:1||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"1b017a8e-77cf-49b0-91a6-912633d62ee3\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"1b017a8e-77cf-49b0-91a6-912633d62ee3\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"1b017a8e-77cf-49b0-91a6-912633d62ee3\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded109 [Simulation Model 1:1(Body6)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [137]
+			bc.SourceLocation = selection
+			selection.Ids = [874]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded109 [Simulation Model 1:1(Body6)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"e593b323-6180-4203-97db-64461f33ae28\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"e593b323-6180-4203-97db-64461f33ae28\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"e593b323-6180-4203-97db-64461f33ae28\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded110 [Simulation Model 1:1(Body6)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [136]
+			bc.SourceLocation = selection
+			selection.Ids = [871]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded110 [Simulation Model 1:1(Body6)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"36a3fc31-e6d6-4c94-bc30-b51abe2bd65d\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"36a3fc31-e6d6-4c94-bc30-b51abe2bd65d\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"36a3fc31-e6d6-4c94-bc30-b51abe2bd65d\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded111 [Simulation Model 1:1(Body6)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [135]
+			bc.SourceLocation = selection
+			selection.Ids = [870]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded111 [Simulation Model 1:1(Body6)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"e69058e9-3f17-4b68-893f-dd518ae7de9e\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"e69058e9-3f17-4b68-893f-dd518ae7de9e\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"e69058e9-3f17-4b68-893f-dd518ae7de9e\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded112 [Simulation Model 1:1(Body6)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [133]
+			bc.SourceLocation = selection
+			selection.Ids = [873]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded112 [Simulation Model 1:1(Body6)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"2d903fb2-3e3b-43d6-954c-be9774e97ce9\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"2d903fb2-3e3b-43d6-954c-be9774e97ce9\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"2d903fb2-3e3b-43d6-954c-be9774e97ce9\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded113 [Simulation Model 1:1(Body6)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [132]
+			bc.SourceLocation = selection
+			selection.Ids = [872]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded113 [Simulation Model 1:1(Body6)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ec2d78ee-12fd-4471-ac34-db7fdb91e619\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ec2d78ee-12fd-4471-ac34-db7fdb91e619\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ec2d78ee-12fd-4471-ac34-db7fdb91e619\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded114 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [142]
+			bc.SourceLocation = selection
+			selection.Ids = [1189]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded114 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"4cf92bcd-43f2-4f7e-a983-f83b6b854cdc\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"4cf92bcd-43f2-4f7e-a983-f83b6b854cdc\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"4cf92bcd-43f2-4f7e-a983-f83b6b854cdc\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded115 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [141]
+			bc.SourceLocation = selection
+			selection.Ids = [1192]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded115 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"9757eb55-5623-4415-a696-e00dba6cd1c4\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"9757eb55-5623-4415-a696-e00dba6cd1c4\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"9757eb55-5623-4415-a696-e00dba6cd1c4\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded116 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [140]
+			bc.SourceLocation = selection
+			selection.Ids = [1187]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded116 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:10]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"966f0965-186d-4580-b5c8-32dfcb910f12\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"966f0965-186d-4580-b5c8-32dfcb910f12\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"966f0965-186d-4580-b5c8-32dfcb910f12\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded117 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [139]
+			bc.SourceLocation = selection
+			selection.Ids = [1183]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded117 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ba095696-cf8b-494f-9a0e-090280b773b3\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ba095696-cf8b-494f-9a0e-090280b773b3\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ba095696-cf8b-494f-9a0e-090280b773b3\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded118 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [138]
+			bc.SourceLocation = selection
+			selection.Ids = [1186]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded118 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"c663911e-62ce-4ca2-92dc-69acb5e67db1\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"c663911e-62ce-4ca2-92dc-69acb5e67db1\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"c663911e-62ce-4ca2-92dc-69acb5e67db1\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded119 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [130]
+			bc.SourceLocation = selection
+			selection.Ids = [1181]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded119 [Simulation Model 1:1(Body6)||Hexagon Head Bolt DIN EN 24014 - M20 x 80 Steel 4.6 Plain v1:9]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"02f6384c-b70d-4718-8f0f-50ca335c3b12\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"02f6384c-b70d-4718-8f0f-50ca335c3b12\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"02f6384c-b70d-4718-8f0f-50ca335c3b12\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded120 [Simulation Model 1:1(Body5)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [187]
+			bc.SourceLocation = selection
+			selection.Ids = [869]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded120 [Simulation Model 1:1(Body5)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"6f9bbba0-e511-4f72-a3e4-fe7fa2b88446\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"6f9bbba0-e511-4f72-a3e4-fe7fa2b88446\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"6f9bbba0-e511-4f72-a3e4-fe7fa2b88446\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded121 [Simulation Model 1:1(Body5)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [195]
+			bc.SourceLocation = selection
+			selection.Ids = [865]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded121 [Simulation Model 1:1(Body5)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"020b9b17-924e-4eac-8549-5d6bbe153ff4\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"020b9b17-924e-4eac-8549-5d6bbe153ff4\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"020b9b17-924e-4eac-8549-5d6bbe153ff4\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded122 [Simulation Model 1:1(Body5)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [194]
+			bc.SourceLocation = selection
+			selection.Ids = [864]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded122 [Simulation Model 1:1(Body5)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"75b32f17-0ebe-4f34-a492-a5078208a5b1\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"75b32f17-0ebe-4f34-a492-a5078208a5b1\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"75b32f17-0ebe-4f34-a492-a5078208a5b1\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded123 [Simulation Model 1:1(Body5)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [193]
+			bc.SourceLocation = selection
+			selection.Ids = [867]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded123 [Simulation Model 1:1(Body5)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		connections = GetContactGroup()
+		objects = Model.GetChildren(DataModelObjectCategory.ContactRegion, True)
+		bcs = [contacts for contacts in objects if contacts.TransferableObjectId == \"ae4d26a3-8444-401b-ad36-03153364a377\"]
+		if bcs.Count != 0 and bcs[0].ImportableObjectSourceId == \"Discovery\":
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"ae4d26a3-8444-401b-ad36-03153364a377\"]
+			bc = bcs[0]
+		else:
+			bc = connections.AddContactRegion()
+			bc.TransferableObjectId = \"ae4d26a3-8444-401b-ad36-03153364a377\"
+			bc.ImportableObjectSourceId = \"Discovery\"
+		if bc.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"[S] Bonded124 [Simulation Model 1:1(Body5)||Bottom Frame:1]\"
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [192]
+			bc.SourceLocation = selection
+			selection.Ids = [866]
+			bc.TargetLocation = selection
+			bc.ContactType=ContactType.Bonded
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+	except:
+		message = Ansys.Mechanical.Application.Message('[S] Bonded124 [Simulation Model 1:1(Body5)||Bottom Frame:1]' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = Model
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	analysis = Model.Analyses[0]
+	analysis.Name = \"Study 1 - Static Stress - Load Case1\"
+
+	analysis.EnvironmentTemperature = Quantity(\"295.15 [K]\")
+	analysis.ImportableObjectSourceId = \"Discovery\"
+	try:
+		objects = analysis.GetChildren(DataModelObjectCategory.FixedSupport, True)
+		bcs = [bcs for bcs in objects if bcs.TransferableObjectId == \"030d760b-6f3b-4026-a317-5aea05b7e35a\"]
+		if bcs.Count != 0:
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"030d760b-6f3b-4026-a317-5aea05b7e35a\"]
+			bc = bcs[0]
+		else:
+			bc = analysis.AddFixedSupport()
+			bc.ImportableObjectSourceId = \"Discovery\"
+			bc.TransferableObjectId = \"030d760b-6f3b-4026-a317-5aea05b7e35a\"
+		if bc.ReadOnly and analysis.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"Fixed1\"
+			bc118 = bc
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [136,133,195,193,398,394,396,397,597,601,600,599,875,2226,2225,2293,2292]
+			SetPickFilter(selection)
+			bc.Location = selection
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+		pass
+	except:
+		message = Ansys.Mechanical.Application.Message('Fixed1' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = analysis
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	try:
+		objects = analysis.GetChildren(DataModelObjectCategory.Pressure, True)
+		bcs = [bcs for bcs in objects if bcs.TransferableObjectId == \"1bff706e-ee5b-4d5d-a239-321de0abe6fa\"]
+		if bcs.Count != 0:
+			mapOfImportedObjects = [object for object in mapOfImportedObjects if object.TransferableObjectId != \"1bff706e-ee5b-4d5d-a239-321de0abe6fa\"]
+			bc = bcs[0]
+		else:
+			bc = analysis.AddPressure()
+			bc.ImportableObjectSourceId = \"Discovery\"
+			bc.TransferableObjectId = \"1bff706e-ee5b-4d5d-a239-321de0abe6fa\"
+		if bc.ReadOnly and analysis.ReadOnly:
+			bc.ReadOnly = False
+			bc.Name = \"Pressure3\"
+			bc119 = bc
+			selection = ExtAPI.SelectionManager.CreateSelectionInfo(SelectionTypeEnum.GeometryEntities)
+			selection.Ids = [881]
+			SetPickFilter(selection)
+			bc.Location = selection
+			SetField(analysis, bc.Magnitude, 1010430000000, \"Pa\")
+		bc.ImportableObjectSourceId = \"\"
+		bc.ReadOnly = False
+		pass
+	except:
+		message = Ansys.Mechanical.Application.Message('Pressure3' + \" object couldn't be created.\", MessageSeverityType.Warning)
+		message.Source = analysis
+		ExtAPI.Application.Messages.Add(message)
+		pass
+
+	analysis.ImportableObjectSourceId = \"\"
+	analysis.ReadOnly = False
+	if len(mapOfImportedObjects):
+		for object in mapOfImportedObjects:
+			object.ReadOnly = False
+			object.Delete()
+	if analysis.Solution.GetChildren(DataModelObjectCategory.DataModelObject, True).Count == 1:
+		analysis.Solution.AddTotalDeformation()
+
+	try:
+		ui_handlers.AnalyticsAction(\"ExternalStudyImporter.Fusion.Ansys.Contracts.StaticStructuralData\")
+	except:
+		pass
+
+FlipInvalidContacts()
+Graphics.Camera.SetFit()
+Graphics.ViewOptions.RescaleAnnotations()
+Graphics.Redraw()
+""",
+    Language="Python")
+Save(Overwrite=True)

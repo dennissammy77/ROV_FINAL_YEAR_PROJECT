@@ -1,0 +1,461 @@
+
+Job is running on hostname DESKTOP-FE94H7V
+Job user from this host: Hp
+Starting directory: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+
+Reading control file C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\control_7c813330-f8f7-4812-a750-f0cd920ddd03.rsm .... 
+Correct Cluster verified
+Cluster Type: ARC
+Underlying Cluster: ARC
+    RSM_CLUSTER_TYPE = ARC
+Compute Server is running on DESKTOP-FE94H7V
+Reading commands and arguments...
+    Command 1: %AWP_ROOT241%\SEC\SolverExecutionController\runsec.bat, arguments: , redirectFile: None
+Running from shared staging directory ...
+    RSM_USE_LOCAL_SCRATCH = False
+    RSM_LOCAL_SCRATCH_DIRECTORY = 
+    RSM_LOCAL_SCRATCH_PARTIAL_UNC_PATH = 
+Cluster Shared Directory: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+    RSM_SHARE_STAGING_DIRECTORY = C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+Job file clean up: True
+Use SSH on Linux cluster nodes: True
+    RSM_USE_SSH_LINUX = True
+LivelogFile: NOLIVELOGFILE
+StdoutLiveLogFile: stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+StderrLiveLogFile: stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.live 
+Reading input files...
+    *.cgns
+    *.dat
+    *.mac
+    *.swf
+    cp*.*
+    file*.*
+    knockdown.ist
+    thermal.build
+    SecInput.txt
+    nlad_mesh_input.msh
+    nlad_mesh_input.asc
+    *.comps
+    *.par
+    *.rth
+    commands.xml
+Reading cancel files...
+    sec.interrupt
+Reading output files...
+    *.NR*
+    *.bswf
+    *.swf
+    *.xml
+    *apip.json
+    AMHighStrain.txt
+    AMResults.txt
+    CAERepOutput.xml
+    Harmonic*.h5
+    Harmonic*.vtk
+    Load_*.inp
+    Modal*.h5
+    Modal*.vtk
+    Mode_mapping_*.txt
+    NotSupportedElems.dat
+    ObjectiveHistory.out
+    PostImage*.png
+    RemotePostInformation.txt
+    Static*.h5
+    Static*.vtk
+    cyclic_map.json
+    exit.topo
+    file*.dsub
+    file*.ldhi
+    file*.mntr
+    file*.png
+    file*.r0*
+    file*.r1*
+    file*.r2*
+    file*.r3*
+    file*.r4*
+    file*.r5*
+    file*.r6*
+    file*.r7*
+    file*.r8*
+    file*.r9*
+    file*.rd*
+    file*.rst
+    file*.sub
+    file.BCS
+    file.DSP
+    file.PCS
+    file.ce
+    file.cm
+    file.cnd
+    file.cnm
+    file.err
+    file.gst
+    file.json
+    file.nd*
+    file.nlh
+    file.nr*
+    file.rdb
+    file.rfl
+    file.spm
+    file0.BCS
+    file0.PCS
+    file0.ce
+    file0.cnd
+    file0.err
+    file0.gst
+    file0.nd*
+    file0.nlh
+    file0.nr*
+    frequencies_*.out
+    input.x17
+    intermediate*.topo
+    knockdown.ist
+    morphed*.stl
+    post.out
+    record.txt
+    solve*.out
+    structured_history.xml
+    topo.err
+    topo.out
+    topo_cyclic_map.txt
+    vars.topo
+    sec.validation.executed
+    *.comps
+    *.par
+    *.rth
+Reading exclude files...
+    stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    control_7c813330-f8f7-4812-a750-f0cd920ddd03.rsm
+    hosts.dat
+    exitcode_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    exitcodeCommands_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+    stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+    ClusterJobCustomization.xml
+    ClusterJobs.py
+    clusterjob_7c813330-f8f7-4812-a750-f0cd920ddd03.sh
+    clusterjob_7c813330-f8f7-4812-a750-f0cd920ddd03.bat
+    inquire.request
+    inquire.confirm
+    request.upload.rsm
+    request.download.rsm
+    wait.download.rsm
+    scratch.job.rsm
+    volatile.job.rsm
+    restart.xml
+    cancel_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    liveLogLastPositions_7c813330-f8f7-4812-a750-f0cd920ddd03.rsm
+    stdout_7c813330-f8f7-4812-a750-f0cd920ddd03_kill.rsmout
+    stderr_7c813330-f8f7-4812-a750-f0cd920ddd03_kill.rsmout
+    sec.interrupt
+    stdout_7c813330-f8f7-4812-a750-f0cd920ddd03_*.rsmout
+    stderr_7c813330-f8f7-4812-a750-f0cd920ddd03_*.rsmout
+    stdout_task_*.live
+    stderr_task_*.live
+    control_task_*.rsm
+    stdout_task_*.rsmout
+    stderr_task_*.rsmout
+    exitcode_task_*.rsmout
+    exitcodeCommands_task_*.rsmout
+Reading environment variables...
+    RSM_IRON_PYTHON_HOME = C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\IronPython
+    RSM_TASK_WORKING_DIRECTORY = C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+    RSM_USE_SSH_LINUX = True
+    RSM_QUEUE_NAME = local
+    RSM_CONFIGUREDQUEUE_NAME = Local
+    RSM_COMPUTE_SERVER_MACHINE_NAME = DESKTOP-FE94H7V
+    RSM_HPC_JOBNAME = Mechanical
+    RSM_HPC_DISPLAYNAME = t2-DP0-Model (A4, B4)-Static Structural (B5)-Solution (B6)
+    RSM_HPC_CORES = 4
+    RSM_HPC_DISTRIBUTED = TRUE
+    RSM_HPC_NODE_EXCLUSIVE = FALSE
+    RSM_HPC_QUEUE = local
+    RSM_HPC_USER = DESKTOP-FE94H7V\Hp
+    RSM_HPC_WORKDIR = C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+    RSM_HPC_JOBTYPE = Workbench_ANSYS
+    RSM_HPC_ANSYS_LOCAL_INSTALL_DIRECTORY = C:\Program Files\ANSYS Inc\ANSYS Student\v241
+    RSM_HPC_VERSION = 241
+    RSM_HPC_STAGING = C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+    RSM_HPC_LOCAL_PLATFORM = Windows
+    RSM_HPC_CLUSTER_TARGET_PLATFORM = Windows
+    RSM_HPC_STDOUTFILE = stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    RSM_HPC_STDERRFILE = stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    RSM_HPC_STDOUTLIVE = stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+    RSM_HPC_STDERRLIVE = stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+    RSM_HPC_SCRIPTS_DIRECTORY_LOCAL = C:\Program Files\ANSYS Inc\ANSYS Student\v241\RSM\Config\scripts
+    RSM_HPC_SCRIPTS_DIRECTORY = C:\Program Files\ANSYS Inc\ANSYS Student\v241\RSM\Config\scripts
+    RSM_HPC_SUBMITHOST = localhost
+    RSM_HPC_STORAGEID = <JobId>    <id>a2f28b8f-c8c5-4c10-a9df-f1c4e7ccce90</id>    <nativeId>xmry3ulx.y4i=LocalNoCopy#localhost$C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\</nativeId>    <timestamp>Sunday, June 09, 2024 06:21:21.803 PM</timestamp>    <fullyDefined>True</fullyDefined></JobId>
+    RSM_HPC_PLATFORMSTORAGEID = C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\
+    RSM_HPC_NATIVEOPTIONS = 
+    ARC_ROOT = C:\Program Files\ANSYS Inc\ANSYS Student\v241\RSM\Config\scripts\..\..\ARC
+    RSM_HPC_KEYWORD = ARC
+    RSM_PYTHON_LOCALE = en-us
+Reading AWP_ROOT environment variable name ...
+    AWP_ROOT environment variable name is: AWP_ROOT241
+Reading Low Disk Space Warning Limit ...
+    Low disk space warning threshold set at: 2.0GiB
+Reading File identifier ...
+    File identifier found as: 7c813330-f8f7-4812-a750-f0cd920ddd03
+Done reading control file.
+
+RSM_AWP_ROOT_NAME = AWP_ROOT241
+AWP_ROOT241 install directory: C:\Program Files\ANSYS Inc\ANSYS Student\v241
+RSM_MACHINES = desktop-fe94h7v:4
+Number of nodes assigned for current job = 1 
+Machine list: ['desktop-fe94h7v'] 
+Checking DisableUNCCheck ...
+Unable to read registry for HKEY_CURRENT_USER\Software\Microsoft\Command Processor
+Ignore verifying DisableUNCCheck, you may check it manually if not already done so.
+
+Start running job commands ...
+Running on machine : DESKTOP-FE94H7V
+Current Directory: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+Running command: C:\Program Files\ANSYS Inc\ANSYS Student\v241\SEC\SolverExecutionController\runsec.bat 
+Redirecting output to  None
+Final command arg list : ['C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v241\\SEC\\SolverExecutionController\\runsec.bat']
+Running Process
+Running Solver : C:\Program Files\ANSYS Inc\ANSYS Student\v241\ansys\bin\winx64\ANSYS241.exe -b nolist -s noread -apip on -p ansys -i remote.dat -o solve.out -dis -np 4 -dir "C:/Users/Hp/Desktop/ROV/_ProjectScratch/ScrCACF"
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1 MB     Scratch Memory Requested         0 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      1 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1 MB     Scratch Memory Requested         0 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      1 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.766       Time  =  21:21:45          |
+ |        Elapsed Time (sec) =          4.000       Date  =  06/09/2024        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.812       Time  =  21:21:45          |
+ |        Elapsed Time (sec) =          4.000       Date  =  06/09/2024        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1 MB     Scratch Memory Requested         0 MB |
+ |  Maximum Database Used       1 MB     Maximum Scratch Memory Used      1 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.750       Time  =  21:21:45          |
+ |        Elapsed Time (sec) =          4.000       Date  =  06/09/2024        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*
+Command Exit Code: 7
+Saving exit code file: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\exitcode_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    Exit code file: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\exitcode_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout has been created.
+Saving exit code file: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\exitcodeCommands_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+    Exit code file: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\exitcodeCommands_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout has been created.
+solve --> 
+
+solve -->  ANSYS LICENSE MANAGER ERROR:
+
+solve -->  No FlexNet Publisher (FNP) license found for feature Ansys Mechanical Enterprise.
+
+solve -->              FNP license path: C:\Users\Hp\AppData\Local\Temp\\0e72abf2-54ca-42ba-a9b7-608e3ae83be3
+
+solve --> 
+
+solve -->  *** ERROR - ANSYS license not available.
+
+solve --> 
+
+solve --> +--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+solve --> 
+
+solve --> Release: 2024 R1            Build: 24.1       Update: UP20231106   Platform: WINDOWS x64 
+
+solve --> Date Run: 06/09/2024   Time: 21:21     Process ID: 804
+
+solve --> Operating System: Windows 10  (Build: 19045)
+
+solve --> 
+
+solve --> Processor Model: Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz
+
+solve --> 
+
+solve --> Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+
+solve -->           Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+
+solve -->           Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+
+solve -->           BLAS Library supplied by Intel(R) MKL
+
+solve --> 
+
+solve --> Number of machines requested            :    1
+
+solve --> Total number of cores available         :    4
+
+solve --> Number of physical cores available      :    4
+
+solve --> Number of processes requested           :    4
+
+solve --> Number of threads per process requested :    1
+
+solve --> Total number of cores requested         :    4 (Distributed Memory Parallel)               
+
+solve --> MPI Type: INTELMPI
+
+solve --> MPI Version: Intel(R) MPI Library 2021.10 for Windows* OS
+
+solve --> 
+
+solve --> 
+
+solve --> GPU Acceleration: Not Requested
+
+solve --> 
+
+solve --> Job Name: file0
+
+solve --> 
+
+solve -->   Core                Machine Name   Working Directory
+
+solve -->  -----------------------------------------------------
+
+solve -->      0             DESKTOP-FE94H7V   C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+
+solve -->      1             DESKTOP-FE94H7V   C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+
+solve -->      2             DESKTOP-FE94H7V   C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+
+solve -->      3             DESKTOP-FE94H7V   C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+
+solve -->  
+
+solve -->  
+
+solve --> 
+
+solve --> Total CPU time for main thread                    :        0.3 seconds
+
+solve --> Total CPU time summed for all threads             :        0.1 seconds
+
+solve --> 
+
+solve --> Elapsed time spent obtaining a license            :        0.0 seconds
+
+solve --> Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+
+solve --> Elapsed time spent solution - preprocessing       :        0.0 seconds
+
+solve --> Elapsed time spent computing solution             :        0.0 seconds
+
+solve --> Elapsed time spent solution - postprocessing      :        0.0 seconds
+
+solve --> Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+
+solve -->  
+
+solve --> 
+
+solve --> Sum of disk space used on all processes           :        0.0 MB
+
+solve --> 
+
+solve --> Sum of memory used on all processes               :        8.0 MB
+
+solve --> Sum of memory allocated on all processes          :        0.0 MB
+
+solve --> Physical memory available                         :         16 GB
+
+solve --> Total amount of I/O written to disk               :        0.0 GB
+
+solve --> Total amount of I/O read from disk                :        0.0 GB
+
+solve --> 
+
+solve --> +------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+solve --> 
+
+solve --> 
+
+solve -->  *-----------------------------------------------------------------------------*
+
+solve -->  |                                                                             |
+
+solve -->  |                               RUN COMPLETED                                 |
+
+solve -->  |                                                                             |
+
+solve -->  |-----------------------------------------------------------------------------|
+
+solve -->  |                                                                             |
+
+solve -->  |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+
+solve -->  |                                                                             |
+
+solve -->  |-----------------------------------------------------------------------------|
+
+solve -->  |                                                                             |
+
+solve -->  |  Database Requested(-db)     1024 MB     Scratch Memory Requested      0 MB |
+
+solve -->  |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)      1 MB |
+
+solve -->  |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)     1 MB |
+
+solve -->  |  Sum Database Used(All)         4 MB     Sum Scratch Used(All)         4 MB |
+
+solve -->  |                                                                             |
+
+solve -->  |-----------------------------------------------------------------------------|
+
+solve -->  |                                                                             |
+
+solve -->  |        CP Time      (sec) =          0.078       Time  =  21:21:45          |
+
+solve -->  |        Elapsed Time (sec) =          4.000       Date  =  06/09/2024        |
+
+solve -->  |                                                                             |
+
+solve -->  *-----------------------------------------------------------------------------*
+
+ClusterJobs Exiting with code: 7
+Individual Command Exit Codes are: [7]

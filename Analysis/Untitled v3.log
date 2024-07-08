@@ -1,0 +1,1650 @@
+Untitled v3: Simulation Model 1 - Study 1 - Nonlinear Static Stress
+_____ 2024-06-14 14:57:43 _____
+Document is being uploaded to cloud storage. Cloud job is pending.
+Starting solve
+The job has finished with errors. The cloud credits for this job will be refunded.
+ Receiving results.
+131459 Tetrahedra :  100.0% of elements (100.0% of volume) 
+       Face Angle min:  3.11,  max : 174
+       Dihedral Angle min:  5.2,  max : 176
+       Worst shape ratio :  58  on element 2874
+       Worst aspect ratio :  9.11  on element 1251, shortest edge: 0.000334, longest : 0.041
+       Lowest collapse ratio :  0.0272  on element 2874
+       Worst Jacobian ratio :  2.63  on element 1112
+Warning: MODIFYING SECONDARY GRID 31187 POSITION ON CONTACT ELEMENT 12189 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 1 CONTACT SEGMENT 2             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 1 CONTACT SEGMENT 3             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 31188 POSITION ON CONTACT ELEMENT 12206 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 1 CONTACT SEGMENT 5             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 1 CONTACT SEGMENT 6             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 31232 POSITION ON CONTACT ELEMENT 12203 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31189 POSITION ON CONTACT ELEMENT 12206 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31231 POSITION ON CONTACT ELEMENT 12195 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31230 POSITION ON CONTACT ELEMENT 12199 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31186 POSITION ON CONTACT ELEMENT 12198 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31235 POSITION ON CONTACT ELEMENT 12191 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31233 POSITION ON CONTACT ELEMENT 12204 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31234 POSITION ON CONTACT ELEMENT 12178 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31227 POSITION ON CONTACT ELEMENT 12204 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31226 POSITION ON CONTACT ELEMENT 12207 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31225 POSITION ON CONTACT ELEMENT 12204 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31222 POSITION ON CONTACT ELEMENT 12202 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31224 POSITION ON CONTACT ELEMENT 12206 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31223 POSITION ON CONTACT ELEMENT 12207 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31629 POSITION ON CONTACT ELEMENT 12330 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 2 CONTACT SEGMENT 2             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 2 CONTACT SEGMENT 3             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 31630 POSITION ON CONTACT ELEMENT 12322 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 2 CONTACT SEGMENT 5             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 2 CONTACT SEGMENT 6             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 31674 POSITION ON CONTACT ELEMENT 12342 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31631 POSITION ON CONTACT ELEMENT 12342 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31673 POSITION ON CONTACT ELEMENT 12338 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31672 POSITION ON CONTACT ELEMENT 12338 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31628 POSITION ON CONTACT ELEMENT 12337 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31677 POSITION ON CONTACT ELEMENT 12339 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31675 POSITION ON CONTACT ELEMENT 12342 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31676 POSITION ON CONTACT ELEMENT 12339 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31669 POSITION ON CONTACT ELEMENT 12332 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31668 POSITION ON CONTACT ELEMENT 12330 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31667 POSITION ON CONTACT ELEMENT 12325 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31664 POSITION ON CONTACT ELEMENT 12340 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31666 POSITION ON CONTACT ELEMENT 12341 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 31665 POSITION ON CONTACT ELEMENT 12341 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32954 POSITION ON CONTACT ELEMENT 12745 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 3 CONTACT SEGMENT 2             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 3 CONTACT SEGMENT 3             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 32955 POSITION ON CONTACT ELEMENT 12740 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 3 CONTACT SEGMENT 5             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 3 CONTACT SEGMENT 6             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 32999 POSITION ON CONTACT ELEMENT 12737 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32956 POSITION ON CONTACT ELEMENT 12747 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32998 POSITION ON CONTACT ELEMENT 12716 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32997 POSITION ON CONTACT ELEMENT 12739 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32953 POSITION ON CONTACT ELEMENT 12742 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33002 POSITION ON CONTACT ELEMENT 12732 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33000 POSITION ON CONTACT ELEMENT 12740 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33001 POSITION ON CONTACT ELEMENT 12740 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32994 POSITION ON CONTACT ELEMENT 12744 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32993 POSITION ON CONTACT ELEMENT 12746 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32992 POSITION ON CONTACT ELEMENT 12746 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32989 POSITION ON CONTACT ELEMENT 12746 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32991 POSITION ON CONTACT ELEMENT 12740 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32990 POSITION ON CONTACT ELEMENT 12746 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33842 POSITION ON CONTACT ELEMENT 13013 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 4 CONTACT SEGMENT 2             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 4 CONTACT SEGMENT 3             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 33843 POSITION ON CONTACT ELEMENT 13010 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 4 CONTACT SEGMENT 5             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 4 CONTACT SEGMENT 6             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 33887 POSITION ON CONTACT ELEMENT 13009 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33844 POSITION ON CONTACT ELEMENT 13012 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33886 POSITION ON CONTACT ELEMENT 13014 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33885 POSITION ON CONTACT ELEMENT 13005 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33841 POSITION ON CONTACT ELEMENT 13013 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33890 POSITION ON CONTACT ELEMENT 13013 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33888 POSITION ON CONTACT ELEMENT 13000 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33889 POSITION ON CONTACT ELEMENT 13005 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33882 POSITION ON CONTACT ELEMENT 13011 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33881 POSITION ON CONTACT ELEMENT 13011 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33880 POSITION ON CONTACT ELEMENT 13005 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33877 POSITION ON CONTACT ELEMENT 13013 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33879 POSITION ON CONTACT ELEMENT 13011 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 33878 POSITION ON CONTACT ELEMENT 13012 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32072 POSITION ON CONTACT ELEMENT 12476 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 5 CONTACT SEGMENT 2             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 5 CONTACT SEGMENT 3             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 32073 POSITION ON CONTACT ELEMENT 12473 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 5 CONTACT SEGMENT 5             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: CHECK NORMAL FOR CONTACT ELEMENT 5 CONTACT SEGMENT 6             
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned well 
+              below the primary line contact boundary.
+              - This usually indicates that the y-axis of the slide line primary segment is pointing
+              away from one or more secondary grid points. For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially  positioned 
+              well below the primary surface contact boundary.
+              - This usually indicates that the z-axis of the surface contact primary segment is 
+              pointing away from one or more secondary grid points. The nodal ordering of the 
+              primary slide line defines the element y-axis, which must point toward the secondary 
+              region.
+Action : For slide line elements :
+              - Check that the slide line plane vector specified on the BCONP entry is oriented 
+              correctly.
+              - Try changing the penetration type on the BCONP entry to unsymmetrical.
+              - Check the ordering of the primary slide line grid points and regenerate if 
+              necessary. For contact surface elements :
+              - Try changing the penetration type on the BSCONP entry to unsymmetrical.
+              - Check the ordering of the primary contact surface grid points and regenerate if 
+              necessary. The nodal ordering of the primary contact surface defines the element 
+              z-axis, which must point toward the secondary region. 
+Warning: MODIFYING SECONDARY GRID 32117 POSITION ON CONTACT ELEMENT 12473 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32074 POSITION ON CONTACT ELEMENT 12475 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32116 POSITION ON CONTACT ELEMENT 12466 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32115 POSITION ON CONTACT ELEMENT 12476 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32071 POSITION ON CONTACT ELEMENT 12469 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32120 POSITION ON CONTACT ELEMENT 12461 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32118 POSITION ON CONTACT ELEMENT 12457 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32119 POSITION ON CONTACT ELEMENT 12444 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32112 POSITION ON CONTACT ELEMENT 12472 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32111 POSITION ON CONTACT ELEMENT 12472 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32110 POSITION ON CONTACT ELEMENT 12471 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32107 POSITION ON CONTACT ELEMENT 12473 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: MODIFYING SECONDARY GRID 32109 POSITION ON CONTACT ELEMENT 12464 
+Cause  : For slide line elements :
+              - A grid point referenced on a secondary slide line was initially positioned slightly 
+              below the primary line contact boundary.
+              - The grid point was automatically repositioned to the primary line contact boundary. 
+              For contact surface elements :
+              - A grid point referenced on a secondary contact surface was initially positioned 
+              slightly below the primary surface contact boundary.
+              - The grid point was automatically repositioned to the primary surface contact 
+              boundary.
+Action : No action is required normally.The secondary node of a surface contact element is sometimes
+              generated below the primary contact boundary by the pre-processor. This is more of a 
+              problem for curved surfaces especially when the mesh is coarse. While the actual 
+              amount of penetration is usually within the geometric tolerance of the pre-processor, 
+              the resulting stresses would be significant if the grid point was not repositioned. 
+Warning: Exceeded the limit of 100 warnings
+Base mesh: 223117 nodes, 131459 elements
+Solver mesh: 223117 nodes, 131459 elements
+Error: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED               
+Cause  : The bisection limit specified on the NLPARM (static solutions) or a TSTEPNL (transient 
+              solutions) Bulk Data entry for the current load increment has been reached (default 
+              5).
+Action : Increase the bisection limit and/or investigate the reason for the load bisection.See 
+              message E5075 above. 
+Error: Solver Error
+Error: An error occurred while solving the model.
+

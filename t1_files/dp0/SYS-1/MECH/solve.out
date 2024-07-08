@@ -1,0 +1,88 @@
+
+ Ansys Mechanical Enterprise Academic Student      
+
+ ANSYS LICENSE MANAGER ERROR:
+ Insufficient FlexNet Publisher (FNP) license count of HPC Parallel are available for use, only 2 of the requested 4 tasks were available.
+
+ *** ERROR - Insufficient HPC licenses available.
+whybad=          -4
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2024 R1            Build: 24.1       Update: UP20231106   Platform: WINDOWS x64 
+Date Run: 06/09/2024   Time: 17:59     Process ID: 16408
+Operating System: Windows 10  (Build: 19045)
+
+Processor Model: Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz
+
+Compiler: Intel(R) Fortran Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) C/C++ Compiler Classic Version 2021.9  (Build: 20230302)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by Intel(R) MKL
+
+Number of machines requested            :    1
+Total number of cores available         :    4
+Number of physical cores available      :    4
+Number of processes requested           :    4
+Number of threads per process requested :    1
+Total number of cores requested         :    4 (Distributed Memory Parallel)               
+MPI Type: INTELMPI
+MPI Version: Intel(R) MPI Library 2021.10 for Windows* OS
+
+
+GPU Acceleration: Not Requested
+
+Job Name: file0
+
+  Core                Machine Name   Working Directory
+ -----------------------------------------------------
+     0             DESKTOP-FE94H7V   C:\Users\Hp\AppData\Local\Temp\WB_Hp_6716_2\_ProjectScratch\Scr472B
+     1             DESKTOP-FE94H7V   C:\Users\Hp\AppData\Local\Temp\WB_Hp_6716_2\_ProjectScratch\Scr472B
+     2             DESKTOP-FE94H7V   C:\Users\Hp\AppData\Local\Temp\WB_Hp_6716_2\_ProjectScratch\Scr472B
+     3             DESKTOP-FE94H7V   C:\Users\Hp\AppData\Local\Temp\WB_Hp_6716_2\_ProjectScratch\Scr472B
+ 
+ 
+
+Total CPU time for main thread                    :        0.4 seconds
+Total CPU time summed for all threads             :        0.1 seconds
+
+Elapsed time spent obtaining a license            :        0.3 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+
+Sum of disk space used on all processes           :        0.0 MB
+
+Sum of memory used on all processes               :        8.0 MB
+Sum of memory allocated on all processes          :        0.0 MB
+Physical memory available                         :         16 GB
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2024 R1         Build 24.1         UP20231106    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested      0 MB |
+ |  Max Database Used(Master)      1 MB     Max Scratch Used(Master)      1 MB |
+ |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)     1 MB |
+ |  Sum Database Used(All)         4 MB     Sum Scratch Used(All)         4 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          0.125       Time  =  17:59:34          |
+ |        Elapsed Time (sec) =          1.000       Date  =  06/09/2024        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

@@ -1,0 +1,126 @@
+﻿[21:21:38][DEBUG]: 
+[21:21:38][DEBUG]: External cluster command: Job:1 ---------------------------------------
+[21:21:38][DEBUG]:     Cluster command before expansion: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF/clusterjob_7c813330-f8f7-4812-a750-f0cd920ddd03.bat 
+[21:21:38][DEBUG]:     Final cluster command: C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF/clusterjob_7c813330-f8f7-4812-a750-f0cd920ddd03.bat 
+[21:21:38][DEBUG]:     Working directory : C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+[21:21:38][DEBUG]:     Variables:
+[21:21:38][DEBUG]:         RSM_HPC_VERSION=241
+[21:21:38][DEBUG]:         RSM_COMPUTE_SERVER_MACHINE_NAME=DESKTOP-FE94H7V
+[21:21:38][DEBUG]:         RSM_HPC_STDOUTFILE=stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+[21:21:38][DEBUG]:         PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+[21:21:38][DEBUG]:         RSM_HPC_USER=DESKTOP-FE94H7V\Hp
+[21:21:38][DEBUG]:         CFX5_CCL_LIBS=CFXPostRules.ccl;RULES;VARIABLES;MATERIAL;REACTIONS
+[21:21:38][DEBUG]:         RANDFILE=C:\Users\Hp\AppData\Local\Temp\.ansys\\.ansys.rnd
+[21:21:38][DEBUG]:         CUE_LOCAL_DATA_DIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\etc
+[21:21:38][DEBUG]:         KMP_WARNINGS=0
+[21:21:38][DEBUG]:         RSM_HPC_SCRIPTS_DIRECTORY=%AWP_ROOT241%\RSM\Config\scripts
+[21:21:38][DEBUG]:         CFX_LANGUAGE=en_US
+[21:21:38][DEBUG]:         RSM_HPC_LOCAL_PLATFORM=Windows
+[21:21:38][DEBUG]:         QTWEBENGINE_REMOTE_DEBUGGING=9766
+[21:21:38][DEBUG]:         RSM_HPC_STORAGEID=<JobId>    <id>a2f28b8f-c8c5-4c10-a9df-f1c4e7ccce90</id>    <nativeId>xmry3ulx.y4i=LocalNoCopy#localhost$C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\</nativeId>    <timestamp>Sunday, June 09, 2024 06:21:21.803 PM</timestamp>    <fullyDefined>True</fullyDefined></JobId>
+[21:21:38][DEBUG]:         CFX5EXECDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\bin\winnt-amd64
+[21:21:38][DEBUG]:         RSM_HPC_STAGING=C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+[21:21:38][DEBUG]:         MAGEnvFabricationPath=C:/Users/Hp/AppData/Local/Autodesk/webdeploy/production/0b67cdf9b5e1511700618e51757ca1535bfaa4da/Applications/Fabrication
+[21:21:38][DEBUG]:         FPS_BROWSER_USER_PROFILE_STRING=Default
+[21:21:38][DEBUG]:         RSM_PYTHON_EXE=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CPython\3_10\winx64\Release\python\python.exe
+[21:21:38][DEBUG]:         SoS_debug_exe=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos\sos_console.exe
+[21:21:38][DEBUG]:         RSM_HPC_STDERRFILE=stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.rsmout
+[21:21:38][DEBUG]:         RELEASE_STAGE=production
+[21:21:38][DEBUG]:         ANSYS241_DIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\ANSYS
+[21:21:38][DEBUG]:         ANSYS_RSM_CPP_CLIENT_PID=11248
+[21:21:38][DEBUG]:         EKM_HOME=C:\Program Files\ANSYS Inc\ANSYS Student\v241\EKM\EKM-Connector
+[21:21:38][DEBUG]:         RSM_TASK_WORKING_DIRECTORY=C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+[21:21:38][DEBUG]:         no_grpc_proxy=localhost
+[21:21:38][DEBUG]:         QTWEBENGINE_CHROMIUM_FLAGS= --log-severity=disabled  --ignore-gpu-blocklist --disable-gpu-rasterization  --no-proxy-server Fusion360
+[21:21:38][DEBUG]:         ChocolateyInstall=C:\ProgramData\chocolatey
+[21:21:38][DEBUG]:         FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+[21:21:38][DEBUG]:         RSM_HPC_JOBTYPE=Workbench_ANSYS
+[21:21:38][DEBUG]:         SSL_CERT_FILE=C:\Users\Hp\AppData\Local\Autodesk\webdeploy\production\0b67cdf9b5e1511700618e51757ca1535bfaa4da\certs.pem
+[21:21:38][DEBUG]:         CFX5BINDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\bin
+[21:21:38][DEBUG]:         RSM_CONFIGUREDQUEUE_NAME=Local
+[21:21:38][DEBUG]:         ANSYSCL241_DIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\licensingclient
+[21:21:38][DEBUG]:         __KMP_REGISTERED_LIB_11248=00007FFD90F2EE14-cafedc1e-libiomp5md.dll
+[21:21:38][DEBUG]:         SESSIONNAME=Console
+[21:21:38][DEBUG]:         TK_LIBRARY=C:/Users/Hp/AppData/Local/Autodesk/webdeploy/production/0b67cdf9b5e1511700618e51757ca1535bfaa4da/Python/tcl/tk8.6
+[21:21:38][DEBUG]:         RSM_USE_SSH_LINUX=True
+[21:21:38][DEBUG]:         RSM_HPC_PLATFORMSTORAGEID=C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\
+[21:21:38][DEBUG]:         RSM_IRON_PYTHON_HOME=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\IronPython
+[21:21:38][DEBUG]:         ANSYSLI_USAGE=1097c48875e744e99c070c0d5567f97e
+[21:21:38][DEBUG]:         CUE_NO_DEBUG_OUT=1
+[21:21:38][DEBUG]:         RSM_HPC_QUEUE=local
+[21:21:38][DEBUG]:         RSM_HPC_STDOUTLIVE=stdout_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+[21:21:38][DEBUG]:         RSM_HPC_NODE_EXCLUSIVE=FALSE
+[21:21:38][DEBUG]:         RSM_HPC_SUBMITHOST=localhost
+[21:21:38][DEBUG]:         CFX5PERLDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\tools\perl-5.34.1\bin\MSWin32-x64-perlio
+[21:21:38][DEBUG]:         PUBLIC=C:\Users\Public
+[21:21:38][DEBUG]:         RSM_HPC_STDERRLIVE=stderr_7c813330-f8f7-4812-a750-f0cd920ddd03.live
+[21:21:38][DEBUG]:         ANSHELP_SESSION_ID=83B0F0EE7EC84C54956D49C5CEAACE47
+[21:21:38][DEBUG]:         P_SCHEMA=C:\Program Files\ANSYS Inc\ANSYS Student\v241\AISOL\CADIntegration\Parasolid\PSchema
+[21:21:38][DEBUG]:         CFX5_CCL_PARSER=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\lib\ccl
+[21:21:38][DEBUG]:         SoS_install_dir=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos
+[21:21:38][DEBUG]:         CFX_TOOLS_ROOT=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\tools
+[21:21:38][DEBUG]:         QT_D3DCREATE_MULTITHREADED=1
+[21:21:38][DEBUG]:         RSM_HPC_ANSYS_LOCAL_INSTALL_DIRECTORY=C:\Program Files\ANSYS Inc\ANSYS Student\v241
+[21:21:38][DEBUG]:         CFX5_CCL_LIBSDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\etc
+[21:21:38][DEBUG]:         CFX5ROOT=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX
+[21:21:38][DEBUG]:         ANSYS_SYSDIR=winx64
+[21:21:38][DEBUG]:         QT_OPENGL_BUGLIST=C:/Users/Hp/AppData/Local/Autodesk/webdeploy/production/0b67cdf9b5e1511700618e51757ca1535bfaa4da/Neutron/UI/Base/Resources/QtGPUDriverBlacklist.json
+[21:21:38][DEBUG]:         CFX5PERL=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\tools\perl-5.34.1\bin\MSWin32-x64-perlio\perl.exe
+[21:21:38][DEBUG]:         RSM_PYTHON_HOME=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CPython\3_10\winx64\Release\python
+[21:21:38][DEBUG]:         ANSYSCL_SESSION_ID=2680.17687
+[21:21:38][DEBUG]:         LSTC_LICENSE=Ansys
+[21:21:38][DEBUG]:         AWP_ROOT241=C:\Program Files\ANSYS Inc\ANSYS Student\v241
+[21:21:38][DEBUG]:         TMP=C:\Users\Hp\AppData\Local\Temp
+[21:21:38][DEBUG]:         ARC_ROOT=C:\Program Files\ANSYS Inc\ANSYS Student\v241\RSM\Config\scripts\..\..\ARC
+[21:21:38][DEBUG]:         ANSYS_RSM_CPP_CLIENT_HOST=localhost
+[21:21:38][DEBUG]:         PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+[21:21:38][DEBUG]:         LOCALAPPDATA=C:\Users\Hp\AppData\Local
+[21:21:38][DEBUG]:         CFX5LIBDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\lib
+[21:21:38][DEBUG]:         RSM_HPC_KEYWORD=ARC
+[21:21:38][DEBUG]:         CADOE_LIBDIR241=C:\Program Files\ANSYS Inc\ANSYS Student\v241\CommonFiles\Language\en-us
+[21:21:38][DEBUG]:         MAGQtPluginPath=plugins
+[21:21:38][DEBUG]:         SoS_exe=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos\sos.exe
+[21:21:38][DEBUG]:         RSM_HPC_DISTRIBUTED=TRUE
+[21:21:38][DEBUG]:         ANS_RSM_APPDATA=C:\Users\Hp\AppData\Roaming\Ansys\v241\RSM
+[21:21:38][DEBUG]:         USERDOMAIN_ROAMINGPROFILE=DESKTOP-FE94H7V
+[21:21:38][DEBUG]:         CFX5_CCL_PARSER_PACKAGE=CUEPost
+[21:21:38][DEBUG]:         RSM_HPC_SCRIPTS_DIRECTORY_LOCAL=C:\Program Files\ANSYS Inc\ANSYS Student\v241\RSM\Config\scripts
+[21:21:38][DEBUG]:         CFX_DATA_DIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\etc
+[21:21:38][DEBUG]:         ChocolateyLastPathUpdate=133293630874265459
+[21:21:38][DEBUG]:         RSM_HPC_WORKDIR=C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+[21:21:38][DEBUG]:         OneDrive=C:\Users\Hp\OneDrive
+[21:21:38][DEBUG]:         RSM_HPC_CORES=4
+[21:21:38][DEBUG]:         EKM_MX=-Xmx256m
+[21:21:38][DEBUG]:         ANSYS_SYSDIR32=intel
+[21:21:38][DEBUG]:         ANSYS_APIP_PLATFORM=Workbench
+[21:21:38][DEBUG]:         AWP_TEMP_DIR=C:\Users\Hp\AppData\Local\Temp\ANSYS.Hp.1
+[21:21:38][DEBUG]:         DriverData=C:\Windows\System32\Drivers\DriverData
+[21:21:38][DEBUG]:         RSM_HPC_COMMAND=clusterjob_7c813330-f8f7-4812-a750-f0cd920ddd03.bat
+[21:21:38][DEBUG]:         RSM_QUEUE_NAME=local
+[21:21:38][DEBUG]:         RSM_HPC_CLUSTER_TARGET_PLATFORM=Windows
+[21:21:38][DEBUG]:         RSM_HPC_DISPLAYNAME=t2-DP0-Model (A4, B4)-Static Structural (B5)-Solution (B6)
+[21:21:38][DEBUG]:         ANSYS_PYTHON=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CPython\3_10\winx64\Release\python
+[21:21:38][DEBUG]:         TEMP=C:\Users\Hp\AppData\Local\Temp
+[21:21:38][DEBUG]:         CADOE_DOCDIR241=C:\Program Files\ANSYS Inc\ANSYS Student\v241\CommonFiles\help\en-us\solviewer
+[21:21:38][DEBUG]:         AWP_LOCALE241=en-us
+[21:21:38][DEBUG]:         RSM_HPC_JOBNAME=Mechanical
+[21:21:38][DEBUG]:         TCL_LIBRARY=C:/Users/Hp/AppData/Local/Autodesk/webdeploy/production/0b67cdf9b5e1511700618e51757ca1535bfaa4da/Python/tcl/tcl8.6
+[21:21:38][DEBUG]:         RSM_HPC_PARSE_MARKER=START
+[21:21:38][DEBUG]:         ANSYS_RSM_CPP_CONNECTOR_PORT=63142
+[21:21:38][DEBUG]:         CFX5_CCL_RULES=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\etc\RULES
+[21:21:38][DEBUG]:         SYNHUB_CONFIG_PATH=C:\Users\Hp\AppData\Roaming\Autodesk\Synergy;NO_DEFAULT
+[21:21:38][DEBUG]:         ComSpec=C:\Windows\system32\cmd.exe
+[21:21:38][DEBUG]:         ANSYS_RSM_CPP_CLIENT_PORT=63143
+[21:21:38][DEBUG]:         CFX5_CCL_RULESDIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\commonfiles\CFX\etc
+[21:21:38][DEBUG]:         ARC_JOBID=1
+[21:21:38][DEBUG]:         ARC_NODES=desktop-fe94h7v:4
+[21:21:38][DEBUG]:         ARC_MASTER_MACHINE=desktop-fe94h7v
+[21:21:38][DEBUG]: -----------------------------------------------------------------------
+[21:21:38][DEBUG]: 
+Active code page: 65001
+Job started on DESKTOP-FE94H7V
+ClusterSharedDirectory=C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF
+AWP_ROOT241=C:\Program Files\ANSYS Inc\ANSYS Student\v241
+Command=C:\Program Files\ANSYS Inc\ANSYS Student\v241/commonfiles/CPython/3_10/winx64/Release/python/python.exe
+running the commmand
+command: "C:\Program Files\ANSYS Inc\ANSYS Student\v241/commonfiles/CPython/3_10/winx64/Release/python/python.exe" -B -E "C:\Program Files\ANSYS Inc\ANSYS Student\v241/RSM/Config/scripts/ClusterJobs.py" "C:\Users\Hp\Desktop\ROV\_ProjectScratch\ScrCACF\control_7c813330-f8f7-4812-a750-f0cd920ddd03.rsm"

@@ -1,0 +1,21 @@
+// pin defs
+const int Pin = 1;
+
+void setup()
+{
+  Serial.begin(9600);
+Serial.prinln(); 
+}
+
+void loop()
+{
+  
+  /* get the temperature */
+int vout = analogRead(Pin);
+  tempc = (vout*4.88)/10;
+ 
+  /* send pressure to serial port */
+  Serial.print(tempc);
+  Serial.print("deg celcius");
+  delay(1000);
+}
